@@ -1,21 +1,18 @@
-FROM node:16
+FROM strapi/base:14
 ARG SOURCE_ROOT="./src/main/node"
-# Create app directory
-WORKDIR /usr/src/app
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# Set up working directory that will be used to copy files/directories below :
+WORKDIR entando/integrationEnv/strapi/entando-customized-strapi
+
+# Copy package.json to root directory inside Docker container of Strapi app
 COPY $SOURCE_ROOT/package*.json ./
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci
 
-# Bundle app source
 COPY $SOURCE_ROOT .
 
+ENV NODE_ENV production
+
+# RUN npm run build
 EXPOSE 8081
 
-CMD [ "node", "bin/www" ]
-
-
+CMD ["npm", "run", "start"]
