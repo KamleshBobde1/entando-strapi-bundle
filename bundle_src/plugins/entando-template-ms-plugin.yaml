@@ -1,4 +1,4 @@
-image: sachinbaghel27/strapi-node-kc-microservice:0.0.1-SNAPSHOT
+image: sachinbaghel27/strapi-node-microservice-aug-1-50:0.0.1-SNAPSHOT
 dbms: postgresql
 ingressPath: "/entando-template-node-api"
 healthCheckPath: "/actuator/health"

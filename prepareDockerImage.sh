@@ -5,7 +5,7 @@ echo "Building project and Docker image "
 #todo export as global variable
 #todo manage version
 # export MY_IMAGE=CHANGE-IT/node-kc-microservice:0.0.1-SNAPSHOT
-export MY_IMAGE=sachinbaghel27/strapi-node-kc-microservice:0.0.1-SNAPSHOT
+export MY_IMAGE=sachinbaghel27/strapi-node-microservice-aug-1-50:0.0.1-SNAPSHOT
 
 docker build -t ${MY_IMAGE}  .
 echo "Built $MY_IMAGE"

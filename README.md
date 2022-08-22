@@ -12,12 +12,11 @@ With this configuration, you can use the ent cli (https://dev.entando.org/next/d
 4. Attach to kubernetes for an Entando application via ent attach-kubeconfig config-file or similar
 
 ### Publish the bundle.
-1. Build FE: ent prj fe-build -a
-2. Build and publish BE: ./prepareDockerImage.sh
-3. Publish FE: `ent prj fe-push`
-4. Deploy (after connecting to k8s above): `ent prj deploy`
-5. Install the bundle via 1) App Builder, 2) `ent prj install`, or 3) `ent prj install --conflict-strategy=OVERRIDE` on subsequent installs.
-6. Iterate steps 1-4 to publish new versions.
+1. Build and publish BE: ./prepareDockerImage.sh
+2. Publish BE: `ent prj pbs-publish`
+3. Deploy (after connecting to k8s above): `ent prj deploy`
+4. Install the bundle via 1) App Builder, 2) `ent prj install`, or 3) `ent prj install --conflict-strategy=OVERRIDE` on subsequent installs.
+5. Iterate steps 1-4 to publish new versions.
 
 ## Local testing of the project
 You can use the following commands from the application folder to run the local stack
