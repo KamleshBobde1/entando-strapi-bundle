@@ -14,7 +14,8 @@ With this configuration, you can use the ent cli (https://dev.entando.org/next/d
 ### Publish the bundle.
 1. Build FE: ent prj fe-build -a
 2. Build and publish BE: ./prepareDockerImage.sh
-3. Publish FE: `ent prj fe-push`
+3. Publish FE: `ent prj fe-push` , no need to use this command
+    `ent prj pbs-publish` need to use this command
 4. Deploy (after connecting to k8s above): `ent prj deploy`
 5. Install the bundle via 1) App Builder, 2) `ent prj install`, or 3) `ent prj install --conflict-strategy=OVERRIDE` on subsequent installs.
 6. Iterate steps 1-4 to publish new versions.
